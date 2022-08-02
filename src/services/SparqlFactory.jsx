@@ -8,12 +8,6 @@ const SparqlService = {
       endpoint: myConstants.DEFAULT_ENDPOINT,
     });
   },
-
-  fetchPositionName: () => {
-    return sparqlTransformer(myQueries.GET_POSITION_NAME, {
-      endpoint: myConstants.DEFAULT_ENDPOINT,
-    });
-  },
 };
 
 export default SparqlService;

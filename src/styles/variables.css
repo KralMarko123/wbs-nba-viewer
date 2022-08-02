@@ -8,6 +8,8 @@
   --dark-main: #202020;
   --dark-accent: #333533;
   --light-main: #dfdfdf;
+  --light-main-in-rgb: 223, 223, 223;
+  --light-accent: #ffcc22;
 
   /** UTILITY */
   --card-radius: 20px;

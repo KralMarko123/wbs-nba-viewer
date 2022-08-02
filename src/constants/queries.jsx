@@ -3,24 +3,21 @@ import * as myConstants from "./constants";
 export const GET_ALL_PLAYERS = {
   proto: {
     id: "?id",
-    name: "$rdfs:label$required",
+    name: "$rdfs:label$required$lang:en",
     league: "$dbo:league$var:league",
-    image: "$foaf:depiction$required",
+    image: "$foaf:depiction",
     birthDate: "$dbo:birthDate",
     draftYear: "$dbo:draftYear",
+    team: {
+      id: "$dbo:team$required",
+      name: "$dbp:name",
+    },
   },
+
   $values: {
     league: `dbr:${myConstants.NBA_LEAGUE}`,
   },
-  $langTag: "hide",
-};
 
-export const GET_POSITION_NAME = {
-  proto: {
-    id: "?id",
-    name: "$rdfs:label$required",
-    subject: "$dbc:Small_forwards",
-    hypernym: "$dbr:Positions",
-  },
   $langTag: "hide",
+  $limit: 250,
 };
