@@ -4,6 +4,11 @@
   min-height: 100vh;
   padding: 1rem 0;
 
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
   background-color: var(--dark-main);
   color: var(--light-main);
 }
@@ -17,4 +22,10 @@
   justify-content: center;
   align-content: center;
   gap: 2em;
+}
+
+.no-results-message {
+  font-size: 3rem;
+  font-weight: 300;
+  letter-spacing: 3px;
 }

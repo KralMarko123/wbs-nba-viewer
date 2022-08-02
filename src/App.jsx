@@ -52,10 +52,12 @@ const App = () => {
 
   return (
     <div className="app">
-      <Header
-        nameFilterApplied={nameFilterApplied}
-        resultCountFilterApplied={resultCountFilterApplied}
-      />
+      {isLoading === false ? (
+        <Header
+          nameFilterApplied={nameFilterApplied}
+          resultCountFilterApplied={resultCountFilterApplied}
+        />
+      ) : null}
 
       <section className="player-grid">
         {isLoading ? (
@@ -78,6 +80,10 @@ const App = () => {
             );
           })
         )}
+
+        {players.length === 0 && isLoading === false ? (
+          <p className="no-results-message">Seems there are no results...</p>
+        ) : null}
       </section>
     </div>
   );
