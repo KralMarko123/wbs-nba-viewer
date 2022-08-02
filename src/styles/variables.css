@@ -1,0 +1,15 @@
+@import url("https://fonts.googleapis.com/css2?family=Rubik:wght@300;400;700&display=swap");
+
+:root {
+  /** TEXT */
+  --font-default: "Rubik", sans-serif;
+
+  /** COLORS */
+  --dark-main: #202020;
+  --dark-accent: #333533;
+  --light-main: #dfdfdf;
+
+  /** UTILITY */
+  --card-radius: 20px;
+  --simple-shadow: 0px 5px 10px rgba(0, 0, 0, 0.5);
+}
