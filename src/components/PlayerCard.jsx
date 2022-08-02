@@ -11,9 +11,13 @@ const handlePlayerImage = (image) => {
   return imageURL;
 };
 
-const PlayerCard = ({ name, image, dob, draftYear, team }) => {
+const PlayerCard = ({ name, image, dob, draftYear, team, show }) => {
+  let classNames = "player-card";
+
+  if (!show) classNames += " hide";
+
   return (
-    <div className="player-card">
+    <div className={classNames}>
       <img
         className="player-image"
         src={handlePlayerImage(image)}

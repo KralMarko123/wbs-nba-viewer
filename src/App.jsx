@@ -4,16 +4,29 @@ import LoadingSpinner from "./components/helpers/LoadingSpinner";
 import SparqlService from "./services/SparqlFactory";
 
 import "./styles/App.css";
+import Header from "./components/layout/Header";
 
+//helpers
 const isWithLatinCharacters = (name) => {
   if (typeof name === "object") {
     return name.filter((name) => /^[a-zA-Z\s.]+$/.test(name))[0];
   } else return name;
 };
 
+const shouldBeShown = (playerName, nameFilter) => {
+  if (nameFilter === undefined) return true;
+  return playerName.toLowerCase().includes(nameFilter.toLowerCase());
+};
+
 const App = () => {
   const [isLoading, setIsLoading] = useState(true);
   const [players, setPlayers] = useState([]);
+  const [nameFilter, setNameFilter] = useState(undefined);
+
+  //handlers
+  const nameFilterApplied = (text) => {
+    setNameFilter(text);
+  };
 
   useEffect(() => {
     const fetchData = async () => {
@@ -34,20 +47,28 @@ const App = () => {
 
   return (
     <div className="app">
-      {isLoading ? (
-        <LoadingSpinner />
-      ) : (
-        players.map((player) => (
-          <PlayerCard
-            key={player.id}
-            name={isWithLatinCharacters(player.name)}
-            image={player.image}
-            dob={player.birthDate}
-            draftYear={player.draftYear}
-            team={isWithLatinCharacters(player.team.name)}
-          />
-        ))
-      )}
+      <Header nameFilterApplied={nameFilterApplied} />
+
+      <section className="player-grid">
+        {isLoading ? (
+          <LoadingSpinner />
+        ) : (
+          players.map((player) => (
+            <PlayerCard
+              key={player.id}
+              name={isWithLatinCharacters(player.name)}
+              image={player.image}
+              dob={player.birthDate}
+              draftYear={player.draftYear}
+              team={isWithLatinCharacters(player.team.name)}
+              show={shouldBeShown(
+                isWithLatinCharacters(player.name),
+                nameFilter
+              )}
+            />
+          ))
+        )}
+      </section>
     </div>
   );
 };

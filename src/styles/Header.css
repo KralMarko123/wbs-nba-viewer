@@ -1,0 +1,18 @@
+.header {
+  width: 100%;
+  padding: 1rem 3%;
+
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.filter {
+  font-size: 2rem;
+  border-radius: 5px;
+  padding: 0.25em;
+
+  background-color: transparent;
+  border: solid 5px var(--dark-accent);
+  color: var(--light-main);
+}
