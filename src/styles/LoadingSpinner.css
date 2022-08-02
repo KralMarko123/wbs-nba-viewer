@@ -84,3 +84,18 @@
     opacity: 1;
   }
 }
+
+@media (max-width: 767px) {
+  .spinner {
+    width: 300px;
+    height: 300px;
+  }
+
+  .loading-text {
+    font-size: 1.25rem;
+  }
+
+  .spinner-sector {
+    border-width: 10px;
+  }
+}
