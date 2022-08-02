@@ -7,12 +7,24 @@
   align-items: center;
 }
 
-.filter {
+.filters {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.name-filter {
+  min-height: 80px;
   font-size: 2rem;
-  border-radius: 5px;
-  padding: 0.25em;
+  border-radius: 10px;
+  padding: 0.25em 0.5em;
 
   background-color: transparent;
-  border: solid 5px var(--dark-accent);
+  border: solid 3px var(--dark-accent);
   color: var(--light-main);
+}
+
+.name-filter:focus {
+  outline: none;
+  border-color: var(--light-main);
 }

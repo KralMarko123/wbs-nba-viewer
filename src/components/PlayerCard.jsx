@@ -4,17 +4,12 @@ import "../styles/PlayerCard.css";
 
 const handlePlayerImage = (image) => {
   let imageURL;
-
-  typeof image === "object" ? (imageURL = image[0]) : (imageURL = image);
-  imageURL === undefined ? (imageURL = PlaceholderImage) : null;
-
+  image === undefined ? (imageURL = PlaceholderImage) : (imageURL = image);
   return imageURL;
 };
 
-const PlayerCard = ({ name, image, dob, draftYear, team, show }) => {
+const PlayerCard = ({ name, image, dob, draftYear, team }) => {
   let classNames = "player-card";
-
-  if (!show) classNames += " hide";
 
   return (
     <div className={classNames}>

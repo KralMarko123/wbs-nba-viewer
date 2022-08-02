@@ -5,7 +5,7 @@ export const GET_ALL_PLAYERS = {
     id: "?id",
     name: "$rdfs:label$required$lang:en",
     league: "$dbo:league$var:league",
-    image: "$foaf:depiction",
+    image: "$foaf:depiction$sample",
     birthDate: "$dbo:birthDate",
     draftYear: "$dbo:draftYear",
     team: {
@@ -19,5 +19,4 @@ export const GET_ALL_PLAYERS = {
   },
 
   $langTag: "hide",
-  $limit: 250,
 };
