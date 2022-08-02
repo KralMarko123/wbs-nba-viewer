@@ -1,0 +1,15 @@
+{
+  "files": {
+    "main.css": "/wbs-nba-viewer/static/css/main.56194950.css",
+    "main.js": "/wbs-nba-viewer/static/js/main.51bed9ea.js",
+    "static/media/player_placeholder.png": "/wbs-nba-viewer/static/media/player_placeholder.5533c8d4732e255c7b30.png",
+    "static/media/loader_gif.gif": "/wbs-nba-viewer/static/media/loader_gif.74b455dc8255451a5bec.gif",
+    "index.html": "/wbs-nba-viewer/index.html",
+    "main.56194950.css.map": "/wbs-nba-viewer/static/css/main.56194950.css.map",
+    "main.51bed9ea.js.map": "/wbs-nba-viewer/static/js/main.51bed9ea.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.56194950.css",
+    "static/js/main.51bed9ea.js"
+  ]
+}
