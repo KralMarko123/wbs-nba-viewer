@@ -1,11 +1,14 @@
 {
   "name": "proekt-vbs",
   "version": "1.0.0",
-  "description": "",
+  "description": "Web based systems course project",
+  "homepage": "https://kralmarko123.github.io/wbs-nba-viewer",
   "main": "index.js",
   "scripts": {
     "start": "react-scripts start",
-    "build": "react-scripts build"
+    "build": "react-scripts build",
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -d build"
   },
   "author": "Marko Markovikj",
   "license": "ISC",
@@ -27,5 +30,8 @@
       "last 1 firefox version",
       "last 1 safari version"
     ]
+  },
+  "devDependencies": {
+    "gh-pages": "^4.0.0"
   }
 }
