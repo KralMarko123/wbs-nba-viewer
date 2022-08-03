@@ -1,21 +1,17 @@
 import { React } from "react";
+import { useNavigate } from "react-router-dom";
+import * as HelperFunctions from "../services/HelperFunctions";
 import PlaceholderImage from "../assets/images/player_placeholder.png";
 import "../styles/PlayerCard.css";
 
-const handlePlayerImage = (image) => {
-  let imageURL;
-  image === undefined ? (imageURL = PlaceholderImage) : (imageURL = image);
-  return imageURL;
-};
-
 const PlayerCard = ({ name, image, dob, draftYear, team }) => {
-  let classNames = "player-card";
+  let navigate = useNavigate();
 
   return (
-    <div className={classNames}>
+    <div className="player-card" onClick={() => navigate("Details")}>
       <img
         className="player-image"
-        src={handlePlayerImage(image)}
+        src={HelperFunctions.calculatePlayerImage(image)}
         onError={(e) => (e.currentTarget.src = PlaceholderImage)}
         onLoad={(e) => (e.currentTarget.style.background = "none")}
       />
