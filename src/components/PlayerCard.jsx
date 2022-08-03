@@ -4,20 +4,29 @@ import * as HelperFunctions from "../services/HelperFunctions";
 import PlaceholderImage from "../assets/images/player_placeholder.png";
 import "../styles/PlayerCard.css";
 
-const PlayerCard = ({ name, image, dob, draftYear, team }) => {
+const PlayerCard = ({ id, name, image, dob, draftYear, team }) => {
   let navigate = useNavigate();
   const calculatedImage = HelperFunctions.calculatePlayerImage(image);
+  const playerDetails = {
+    id: id,
+    name: name,
+    image: calculatedImage,
+    dob: dob,
+    draftYear: draftYear,
+    team: team,
+  };
 
   return (
     <div
       className="player-card"
-      onClick={() => navigate(`./details/${name}`, { state: { name: name } })}
+      onClick={() => navigate(`./details/${name}`, { state: playerDetails })}
     >
       <img
         className="player-image"
         src={calculatedImage}
         onError={(e) => (e.currentTarget.src = PlaceholderImage)}
         onLoad={(e) => (e.currentTarget.style.background = "none")}
+        alt="player__image"
       />
 
       <div className="player-info">

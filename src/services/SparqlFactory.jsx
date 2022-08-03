@@ -8,6 +8,12 @@ const SparqlService = {
       endpoint: myConstants.DEFAULT_ENDPOINT,
     });
   },
+
+  fetchPlayerInfo: (playerId) => {
+    return sparqlTransformer(myQueries.GET_PLAYER(playerId), {
+      endpoint: myConstants.DEFAULT_ENDPOINT,
+    });
+  },
 };
 
 export default SparqlService;

@@ -20,3 +20,16 @@ export const GET_ALL_PLAYERS = {
 
   $langTag: "hide",
 };
+
+export const GET_PLAYER = (playerId) => {
+  return {
+    proto: {
+      id: "?id",
+      abstract: "$dbo:abstract$required$lang:en",
+      number: "$dbo:number",
+    },
+
+    $values: { "?id": `${playerId}` },
+    $langTag: "hide",
+  };
+};

@@ -75,6 +75,7 @@ const Home = () => {
             return (
               <PlayerCard
                 key={player.id}
+                id={player.id}
                 name={HelperFunctions.isWithLatinCharacters(player.name)}
                 image={player.image}
                 dob={player.birthDate}
