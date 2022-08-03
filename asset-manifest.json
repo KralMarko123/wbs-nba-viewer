@@ -1,15 +1,15 @@
 {
   "files": {
-    "main.css": "/wbs-nba-viewer/static/css/main.bf0272e8.css",
-    "main.js": "/wbs-nba-viewer/static/js/main.fe1cea5f.js",
+    "main.css": "/wbs-nba-viewer/static/css/main.91c5c8f5.css",
+    "main.js": "/wbs-nba-viewer/static/js/main.0cbaa1f5.js",
     "static/media/player_placeholder.png": "/wbs-nba-viewer/static/media/player_placeholder.5533c8d4732e255c7b30.png",
     "static/media/loader_gif.gif": "/wbs-nba-viewer/static/media/loader_gif.74b455dc8255451a5bec.gif",
     "index.html": "/wbs-nba-viewer/index.html",
-    "main.bf0272e8.css.map": "/wbs-nba-viewer/static/css/main.bf0272e8.css.map",
-    "main.fe1cea5f.js.map": "/wbs-nba-viewer/static/js/main.fe1cea5f.js.map"
+    "main.91c5c8f5.css.map": "/wbs-nba-viewer/static/css/main.91c5c8f5.css.map",
+    "main.0cbaa1f5.js.map": "/wbs-nba-viewer/static/js/main.0cbaa1f5.js.map"
   },
   "entrypoints": [
-    "static/css/main.bf0272e8.css",
-    "static/js/main.fe1cea5f.js"
+    "static/css/main.91c5c8f5.css",
+    "static/js/main.0cbaa1f5.js"
   ]
 }
