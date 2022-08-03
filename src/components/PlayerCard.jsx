@@ -1,5 +1,5 @@
 import { React } from "react";
-import { useNavigate } from "react-router-dom";
+import { useNavigate, Link } from "react-router-dom";
 import * as HelperFunctions from "../services/HelperFunctions";
 import PlaceholderImage from "../assets/images/player_placeholder.png";
 import "../styles/PlayerCard.css";
@@ -8,7 +8,7 @@ const PlayerCard = ({ name, image, dob, draftYear, team }) => {
   let navigate = useNavigate();
 
   return (
-    <div className="player-card" onClick={() => navigate("Details")}>
+    <div className="player-card" onClick={() => navigate("./details")}>
       <img
         className="player-image"
         src={HelperFunctions.calculatePlayerImage(image)}

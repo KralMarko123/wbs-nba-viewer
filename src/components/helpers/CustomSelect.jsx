@@ -1,4 +1,4 @@
-import { React, useState } from "react";
+import { React, useState, useEffect } from "react";
 import { AiOutlineArrowDown, AiOutlineArrowUp } from "react-icons/ai";
 import "../../styles/CustomSelect.css";
 
@@ -17,7 +17,16 @@ const CustomSelect = ({
   const handleOptionSelect = (option) => {
     setSelectedOption(option);
     handleResultCountFilter(option);
+    window.sessionStorage.setItem("resultsCount", option);
   };
+
+  useEffect(() => {
+    let resultsCount = window.sessionStorage.getItem("resultsCount");
+    if (resultsCount) {
+      setSelectedOption(resultsCount);
+      handleOptionSelect(resultsCount);
+    }
+  }, []);
 
   return (
     <div

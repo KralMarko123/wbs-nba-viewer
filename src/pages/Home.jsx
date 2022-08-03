@@ -9,6 +9,7 @@ import "../styles/Home.css";
 
 const Home = () => {
   const [isLoading, setIsLoading] = useState(true);
+
   const [allPlayers, setAllPlayersConstant] = useState([]);
   const [players, setPlayers] = useState([]);
   const [resultCount, setResultCount] = useState(20);
@@ -28,9 +29,21 @@ const Home = () => {
 
   useEffect(() => {
     const fetchData = async () => {
+      let allPlayers = window.sessionStorage.getItem("allPlayers");
+      if (allPlayers) {
+        allPlayers = JSON.parse(allPlayers);
+
+        setPlayers(allPlayers);
+        setAllPlayersConstant(allPlayers);
+        setIsLoading(false);
+
+        return;
+      }
+
       await SparqlService.fetchAllPlayers().then((data) => {
         setPlayers(data);
         setAllPlayersConstant(data);
+        window.sessionStorage.setItem("allPlayers", JSON.stringify(data));
 
         setTimeout(() => {
           setIsLoading(false);
