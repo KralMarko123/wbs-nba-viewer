@@ -8,7 +8,7 @@ const App = () => {
     <Router>
       <Routes>
         <Route path="/wbs-nba-viewer" element={<Home />} />
-        <Route path="/wbs-nba-viewer/details" element={<Details />} />
+        <Route path="/wbs-nba-viewer/details/:id" element={<Details />} />
       </Routes>
     </Router>
   );
