@@ -64,7 +64,7 @@ const App = () => {
           <LoadingSpinner />
         ) : (
           players.map((player, i) => {
-            if (i > resultCount) {
+            if (i > resultCount - 1) {
               return;
             }
 
