@@ -9,7 +9,6 @@ import "../styles/Home.css";
 
 const Home = () => {
   const [isLoading, setIsLoading] = useState(true);
-
   const [allPlayers, setAllPlayersConstant] = useState([]);
   const [players, setPlayers] = useState([]);
   const [resultCount, setResultCount] = useState(20);
@@ -65,7 +64,7 @@ const Home = () => {
 
       <section className="player-grid">
         {isLoading ? (
-          <LoadingSpinner />
+          <LoadingSpinner text={"Getting Players"} />
         ) : (
           players.map((player, i) => {
             if (i > resultCount - 1) {

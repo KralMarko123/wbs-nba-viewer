@@ -25,6 +25,18 @@ export const GET_PLAYER = (playerId) => {
   return {
     proto: {
       id: "?id",
+      name: "$rdfs:label$required$lang:en",
+      image: "$foaf:depiction$sample",
+      birthDate: "$dbo:birthDate",
+      draftYear: "$dbo:draftYear",
+      team: {
+        id: "$dbo:team$required",
+        name: "$dbp:name",
+      },
+      position: {
+        id: "$dbo:position$required",
+        name: "$rdfs:label$required$lang:en",
+      },
       abstract: "$dbo:abstract$required$lang:en",
       number: "$dbo:number",
     },

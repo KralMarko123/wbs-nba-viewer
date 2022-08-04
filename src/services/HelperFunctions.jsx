@@ -16,3 +16,10 @@ export const calculatePlayerImage = (image) => {
   if (image === undefined) return PlaceholderImage;
   else return image;
 };
+
+export const formatJerseyNumber = (number) => {
+  if (number === undefined) return "Unknown";
+
+  let numberAsText = number.toString();
+  return numberAsText.length <= 2 ? number : "Had Multiple";
+};

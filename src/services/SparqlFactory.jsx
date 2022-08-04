@@ -9,8 +9,8 @@ const SparqlService = {
     });
   },
 
-  fetchPlayerInfo: (playerId) => {
-    return sparqlTransformer(myQueries.GET_PLAYER(playerId), {
+  fetchPlayer: (id) => {
+    return sparqlTransformer(myQueries.GET_PLAYER(id), {
       endpoint: myConstants.DEFAULT_ENDPOINT,
     });
   },
