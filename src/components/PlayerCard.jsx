@@ -1,18 +1,30 @@
-import { React } from "react";
+import { React, useState } from "react";
 import { useNavigate } from "react-router-dom";
 import * as HelperFunctions from "../services/HelperFunctions";
 import PlaceholderImage from "../assets/images/player_placeholder.png";
 import "../styles/PlayerCard.css";
 
 const PlayerCard = ({ id, name, image, dob, draftYear, team }) => {
-  let navigate = useNavigate();
+  const [scrollPosition, setScrollPosition] = useState(0);
   const calculatedImage = HelperFunctions.calculatePlayerImage(image);
+  let navigate = useNavigate();
+
+  const handlePlayerCardClick = () => {
+    const currentScrollPosition = window.scrollY;
+
+    /** TODO: IMPLEMENT SCROLL POSITION*/
+    // let yPosition = window.sessionStorage.getItem(`scroll-position`);
+    // if (yPosition) {
+    //   yPosition = JSON.parse(yPosition);
+    //   setScrollPosition(yPosition);
+    //   window.sessionStorage.setItem(`scroll-position`, currentScrollPosition);
+    // }
+
+    navigate(`./details/${name}`, { state: id });
+  };
 
   return (
-    <div
-      className="player-card"
-      onClick={() => navigate(`./details/${name}`, { state: id })}
-    >
+    <div className="player-card" onClick={() => handlePlayerCardClick()}>
       <img
         className="player-image"
         src={calculatedImage}
