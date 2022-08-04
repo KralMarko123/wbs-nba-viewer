@@ -19,9 +19,21 @@ const Details = () => {
 
   useEffect(() => {
     const fetchData = async () => {
+      let player = window.sessionStorage.getItem(`${playerId}-details`);
+      if (player) {
+        player = JSON.parse(player);
+
+        setPlayerDetails(player);
+        setIsLoading(false);
+        return;
+      }
+
       await SparqlService.fetchPlayer(playerId).then((data) => {
-        console.log(data[0]);
         setPlayerDetails(data[0]);
+        window.sessionStorage.setItem(
+          `${playerId}-details`,
+          JSON.stringify(data[0])
+        );
 
         setTimeout(() => {
           setIsLoading(false);

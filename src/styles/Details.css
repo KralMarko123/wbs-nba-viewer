@@ -107,23 +107,23 @@
 }
 
 /*LOADER CSS FOR THIS PAGE*/
-.spinner-container {
-  margin-top: 0px !important;
+.details .spinner-container {
+  margin-top: 0px;
   margin-left: 200px;
-  width: fit-content !important;
+  width: fit-content;
 }
 
-.spinner {
-  width: 350px !important;
-  height: 350px !important;
+.details .spinner {
+  width: 350px;
+  height: 350px;
 }
 
-.loading-text {
-  font-size: 1.5rem !important;
+.details .loading-text {
+  font-size: 1.5rem;
 }
 
-.spinner-sector {
-  border-width: 15px !important;
+.details .spinner-sector {
+  border-width: 15px;
 }
 
 @media (min-width: 768px) and (max-width: 1439px) {
@@ -169,7 +169,7 @@
   }
 
   /*LOADER CSS FOR THIS PAGE*/
-  .spinner-container {
+  .details .spinner-container {
     margin-left: unset;
   }
 }
@@ -230,22 +230,22 @@
   }
 
   /*LOADER CSS FOR THIS PAGE*/
-  .spinner-container {
+  .details .spinner-container {
     margin-left: unset;
     width: fit-content !important;
     margin: auto;
   }
 
-  .spinner {
+  .details .spinner {
     width: 200px !important;
     height: 200px !important;
   }
 
-  .loading-text {
+  .details .loading-text {
     font-size: 0.85rem !important;
   }
 
-  .spinner-sector {
+  .details .spinner-sector {
     border-width: 10px !important;
   }
 }

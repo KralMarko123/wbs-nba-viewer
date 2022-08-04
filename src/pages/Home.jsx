@@ -21,8 +21,8 @@ const Home = () => {
   };
 
   const resultCountFilterApplied = (number) => {
-    number === "All"
-      ? setResultCount(players.length)
+    return number === "All"
+      ? setResultCount(allPlayers.length)
       : setResultCount(parseInt(number));
   };
 
