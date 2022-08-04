@@ -1,25 +1,14 @@
-import { React, useState } from "react";
+import { React } from "react";
 import { useNavigate } from "react-router-dom";
 import * as HelperFunctions from "../services/HelperFunctions";
 import PlaceholderImage from "../assets/images/player_placeholder.png";
 import "../styles/PlayerCard.css";
 
 const PlayerCard = ({ id, name, image, dob, draftYear, team }) => {
-  const [scrollPosition, setScrollPosition] = useState(0);
   const calculatedImage = HelperFunctions.calculatePlayerImage(image);
   let navigate = useNavigate();
 
   const handlePlayerCardClick = () => {
-    const currentScrollPosition = window.scrollY;
-
-    /** TODO: IMPLEMENT SCROLL POSITION*/
-    // let yPosition = window.sessionStorage.getItem(`scroll-position`);
-    // if (yPosition) {
-    //   yPosition = JSON.parse(yPosition);
-    //   setScrollPosition(yPosition);
-    //   window.sessionStorage.setItem(`scroll-position`, currentScrollPosition);
-    // }
-
     navigate(`./details/${name}`, { state: id });
   };
 
@@ -34,7 +23,9 @@ const PlayerCard = ({ id, name, image, dob, draftYear, team }) => {
       />
 
       <div className="player-info">
-        <h1 className="player-title">{name || "No Name"}</h1>
+        <h1 className="player-title">
+          {name.replace("(basketball)", "") || "No Name"}
+        </h1>
         <span className="player-data">DOB: {dob}</span>
         <span className="player-data">
           Draft Year: {draftYear || "Unknown"}

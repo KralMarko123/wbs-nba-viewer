@@ -3,9 +3,9 @@ import { useNavigate, useLocation } from "react-router-dom";
 import SparqlService from "../services/SparqlFactory";
 import * as HelperFunctions from "../services/HelperFunctions";
 import * as myConstants from "../constants/constants";
+import LoadingSpinner from "../components/helpers/LoadingSpinner";
 import "../styles/Page.css";
 import "../styles/Details.css";
-import LoadingSpinner from "../components/helpers/LoadingSpinner";
 
 const Details = () => {
   const { state } = useLocation();
@@ -62,8 +62,9 @@ const Details = () => {
               <div className="info">
                 <span className="label">Name:</span>
                 <p className="info-text">
-                  {HelperFunctions.isWithLatinCharacters(playerDetails.name) ||
-                    "No Name"}
+                  {HelperFunctions.isWithLatinCharacters(
+                    playerDetails.name
+                  ).replace("(basketball)", "") || "No Name"}
                 </p>
               </div>
 
