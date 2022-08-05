@@ -4,4 +4,16 @@
 
 ### Author: Marko Markovikj
 
-I will be updating the project as the days go by. I am currently working on the filtering & will soon be adding a details page when clicking on a player's card. I also plan on making it responsive and mobile-friendly. You can find a link to the live app [**here.**](https://kralmarko123.github.io/wbs-nba-viewer/)
+You can find a link to the live app [**here.**](https://kralmarko123.github.io/wbs-nba-viewer/)
+
+---
+
+### Strcuture:
+
+I will be adding more details about the whole project here. The uses of each component and how they are rendered, their logic & state, aswell as the tests which cover the e2e scenarios.
+
+--- 
+
+### Stack:
+|React|Plain CSS|Cypress|
+|-----|---------|-------|
