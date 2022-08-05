@@ -1,0 +1,16 @@
+{
+  "defaultCommandTimeout": 20000,
+  "pageLoadTimeout": 15000,
+
+  "env": {
+    "url": "https://kralmarko123.github.io/wbs-nba-viewer/",
+    "dev-url": "localhost:3000/wbs-nba-viewer"
+  },
+
+  "retries": {
+    "runMode": 1,
+    "openMode": 0
+  },
+
+  "testFiles": "**/*.js"
+}

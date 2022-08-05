@@ -18,7 +18,10 @@ const PlayerCard = ({ id, name, image, dob, draftYear, team }) => {
         className="player-image"
         src={calculatedImage}
         onError={(e) => (e.currentTarget.src = PlaceholderImage)}
-        onLoad={(e) => (e.currentTarget.style.background = "none")}
+        onLoad={(e) => {
+          e.currentTarget.style.background = "none";
+          e.currentTarget.classList.add("loaded");
+        }}
         alt="PLAYER__IMAGE"
       />
 
