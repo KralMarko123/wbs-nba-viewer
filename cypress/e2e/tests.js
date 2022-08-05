@@ -39,7 +39,7 @@ describe("e2e test suite", () => {
     });
   });
 
-  it.only("Enters the details page for each player card and asserts the content within", () => {
+  it("Enters the details page for each player card and asserts the content within", () => {
     const numberOfResults = 10;
     let playerName;
     let dob;
@@ -58,9 +58,11 @@ describe("e2e test suite", () => {
         .click()
         .then(() => {
           cy.log(playerName, dob, draftYear, team);
+
+          cy.get(".info-text").eq(0).should("contain.text", playerName);
         });
 
-      // cy.get(".back-button").click();
+      cy.get(".back-button").click();
     }
   });
 });

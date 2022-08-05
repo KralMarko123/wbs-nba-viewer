@@ -44,9 +44,9 @@ const Home = () => {
         setAllPlayersConstant(data);
         window.sessionStorage.setItem("allPlayers", JSON.stringify(data));
 
-        // setTimeout(() => {
-        //   setIsLoading(false);
-        // }, 5000);
+        setTimeout(() => {
+          setIsLoading(false);
+        }, 5000);
       });
     };
 

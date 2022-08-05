@@ -62,9 +62,9 @@ const Details = () => {
               <div className="info">
                 <span className="label">Name:</span>
                 <p className="info-text">
-                  {HelperFunctions.isWithLatinCharacters(
-                    playerDetails.name
-                  ).replace("(basketball)", "") || "No Name"}
+                  {HelperFunctions.isWithLatinCharacters(playerDetails.name)
+                    .replace("(basketball)", "")
+                    .toLowerCase() || "No Name"}
                 </p>
               </div>
 

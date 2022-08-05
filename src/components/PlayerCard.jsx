@@ -27,7 +27,8 @@ const PlayerCard = ({ id, name, image, dob, draftYear, team }) => {
 
       <div className="player-info">
         <h1 className="player-title">
-          {HelperFunctions.formatBasketballSuffix(name) || "No Name"}
+          {HelperFunctions.formatBasketballSuffix(name).toLowerCase() ||
+            "No Name"}
         </h1>
         <span className="player-data">DOB: {dob}</span>
         <span className="player-data">
