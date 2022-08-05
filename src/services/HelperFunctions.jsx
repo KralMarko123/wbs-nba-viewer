@@ -23,3 +23,9 @@ export const formatJerseyNumber = (number) => {
   let numberAsText = number.toString();
   return numberAsText.length <= 2 ? number : "Had Multiple";
 };
+
+export const formatBasketballSuffix = (text) => {
+  return text !== undefined
+    ? text.toLowerCase().replace("(basketball)", "")
+    : text;
+};

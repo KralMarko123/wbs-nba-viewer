@@ -99,7 +99,9 @@ const Details = () => {
               <div className="info">
                 <span className="label">Position:</span>
                 <p className="info-text">
-                  {playerDetails.position.name || "Unknown"}
+                  {HelperFunctions.formatBasketballSuffix(
+                    playerDetails.position.name
+                  ) || "Unknown"}
                 </p>
               </div>
             </div>
