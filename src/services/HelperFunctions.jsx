@@ -1,6 +1,6 @@
-//HELPER FUNCTIONS
 import PlaceholderImage from "../assets/images/player_placeholder.png";
 
+//HELPER FUNCTIONS
 export const isWithLatinCharacters = (name) => {
   if (typeof name === "object") {
     return name.filter((name) => /^[a-zA-Z\s.]+$/.test(name))[0];

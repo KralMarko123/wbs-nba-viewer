@@ -1,6 +1,7 @@
 .spinner-container {
-  margin-top: 100px;
   width: 100%;
+  margin-top: 100px;
+
   display: flex;
   justify-content: center;
   align-items: center;
@@ -14,9 +15,9 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  overflow: hidden;
 
   animation: show 1s ease-in forwards;
+  overflow: hidden;
 }
 
 .loading-text {

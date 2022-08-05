@@ -8,8 +8,8 @@
   align-items: center;
 
   background-color: transparent;
-  border-radius: 10px;
   border: solid 3px var(--dark-accent);
+  border-radius: 10px;
 }
 
 .custom-select.active {
@@ -26,21 +26,22 @@
 }
 
 .select-arrow {
-  font-size: 1.5rem;
   fill: var(--light-main);
+  font-size: 1.5rem;
 }
 
 .options {
+  width: 100%;
   position: absolute;
   top: 110%;
-  width: 100%;
+
+  border: solid 3px var(--dark-main);
   border-radius: 10px;
 
-  overflow: hidden;
-  border: solid 3px var(--dark-main);
-
   display: none;
+
   z-index: 10;
+  overflow: hidden;
 }
 
 .options.shown {
@@ -57,11 +58,13 @@
 
   color: var(--dark-main);
   font-size: 1.25rem;
+
   overflow: hidden;
 }
 
 .option:hover {
   cursor: pointer;
+
   background-color: var(--dark-main);
   color: var(--light-main);
 }
@@ -93,7 +96,6 @@
     width: 30%;
     min-width: unset;
     min-height: 60px;
-
     padding: 0.15em 0.35em;
   }
 

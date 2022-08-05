@@ -22,10 +22,11 @@
 .player-image {
   width: 50%;
   height: 100%;
-  object-position: center top;
-  object-fit: cover;
 
   background: url(../assets/images/loader_gif.gif) center no-repeat;
+
+  object-position: center top;
+  object-fit: cover;
 }
 
 .player-info {

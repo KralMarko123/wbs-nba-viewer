@@ -14,15 +14,15 @@
 }
 
 .name-filter {
-  padding: 0.25em 0.5em;
   min-height: 80px;
+  padding: 0.25em 0.5em;
 
   background-color: transparent;
   border: solid 3px var(--dark-accent);
   border-radius: 10px;
 
-  font-size: 2rem;
   color: var(--light-main);
+  font-size: 2rem;
 }
 
 .name-filter:focus {
