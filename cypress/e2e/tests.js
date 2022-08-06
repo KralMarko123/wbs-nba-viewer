@@ -5,7 +5,12 @@ describe("e2e test suite", () => {
     cy.visit(Cypress.env("dev-url"));
   });
 
-  it("opens up the Home page and checks the default state of the page", () => {
+  it("Goes to a non-existent route and checks if the NotFound page is rendered", () => {
+    cy.visit(`${Cypress.env("dev-url")}testnotfound`);
+    cy.checkNotFound();
+  });
+
+  it("Opens up the Home page and checks the default state of the page", () => {
     cy.checkDefaultState();
   });
 

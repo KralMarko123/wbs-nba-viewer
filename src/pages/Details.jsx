@@ -21,11 +21,15 @@ const Details = () => {
     const fetchData = async () => {
       let player = window.sessionStorage.getItem(`${playerId}-details`);
       if (player) {
-        player = JSON.parse(player);
+        try {
+          player = JSON.parse(player);
 
-        setPlayerDetails(player);
-        setIsLoading(false);
-        return;
+          setPlayerDetails(player);
+          setIsLoading(false);
+          return;
+        } catch (error) {
+          navigate("*");
+        }
       }
 
       await SparqlService.fetchPlayer(playerId).then((data) => {

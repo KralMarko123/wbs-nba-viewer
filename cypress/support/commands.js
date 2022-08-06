@@ -32,3 +32,11 @@ Cypress.Commands.add(
     cy.get(".info-text").eq(4).should("contain.text", dob);
   }
 );
+
+Cypress.Commands.add("checkNotFound", () => {
+  cy.get(".not-found").should("be.visible");
+  cy.get(".no-results-message").should(
+    "have.text",
+    "Looks like there isn't anything here..."
+  );
+});
