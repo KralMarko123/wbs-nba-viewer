@@ -17,8 +17,8 @@ describe("e2e test suite", () => {
       .and("have.text", "Seems there are no results...");
   });
 
-  it("Checks if selected results count is equal with the number of player cards displayed", () => {
-    const possibleResultsCounts = ["10", "20", "50", "All"];
+  it("Checks if selected results count is equal to the number of player cards displayed", () => {
+    const possibleResultsCounts = [10, 20, 50, "All"];
 
     possibleResultsCounts.forEach((count) => {
       cy.selectResultsCount(count);
@@ -30,8 +30,8 @@ describe("e2e test suite", () => {
     });
   });
 
-  it("Applies a filter and checks if said filter correspons with player names present on the page", () => {
-    cy.selectResultsCount("10");
+  it("Applies a filter and checks if said filter corresponds with player names present on the page", () => {
+    cy.selectResultsCount(10);
 
     const randomTwoLetterPair = ["ma", "ba", "ze", "no", "an", "do", "di"];
     randomTwoLetterPair.forEach((pair) => {
@@ -40,7 +40,8 @@ describe("e2e test suite", () => {
   });
 
   it("Enters the details page for each player card and asserts the content within", () => {
-    const numberOfResults = 10;
+    const numberOfResults = 20;
+    cy.selectResultsCount(numberOfResults);
     let playerName;
     let dob;
     let draftYear;
@@ -57,12 +58,11 @@ describe("e2e test suite", () => {
         })
         .click()
         .then(() => {
-          cy.log(playerName, dob, draftYear, team);
-
-          cy.get(".info-text").eq(0).should("contain.text", playerName);
+          cy.checkPlayerInfoInDetailsPage(playerName, dob, draftYear, team);
         });
 
       cy.get(".back-button").click();
+      cy.get(".home").should("be.visible");
     }
   });
 });

@@ -22,3 +22,13 @@ Cypress.Commands.add("checkPlayerCardsAgainstText", (text) => {
   });
   cy.get("#name").clear();
 });
+
+Cypress.Commands.add(
+  "checkPlayerInfoInDetailsPage",
+  (playerName, dob, draftYear, team) => {
+    cy.get(".info-text").eq(0).should("contain.text", playerName);
+    cy.get(".info-text").eq(1).should("contain.text", team);
+    cy.get(".info-text").eq(3).should("contain.text", draftYear);
+    cy.get(".info-text").eq(4).should("contain.text", dob);
+  }
+);
