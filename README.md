@@ -18,7 +18,7 @@ This section covers the main aspects of the application. This includes:
 
 #### Services & Components:
 
-The most notable part of the entire app is the `SparqlFactory.jsx` file. It has two calls which fetch data from the [dbpedia](src\constants\constants.jsx) endpoint using the package mentioned in the beginning. The first one uses the **_GET_ALL_PLAYERS_** query defined in the `queries.jsx` file. It is a JSON object with properties that are transformed into a SPARQL query accordingly.
+The most notable part of the entire app is the `SparqlFactory.jsx` file. It has two calls which fetch data from the [dbpedia](./src/constants/constants.jsx) endpoint using the package mentioned in the beginning. The first one uses the **_GET_ALL_PLAYERS_** query defined in the `queries.jsx` file. It is a JSON object with properties that are transformed into a SPARQL query accordingly.
 
 This is possible due to the **SparqlTransformer** package. You can find out more about how it works [here.](https://www.youtube.com/watch?v=lafGyk9VBlI&t=2499s)
 
@@ -36,11 +36,11 @@ Each page is unique due to the _id_ passed and the React's `BrowserRouter`. If f
 
 #### Styling:
 
-Not much to cover here. The styling consists of plain CSS with some variables for the colors used to have some sort of consistency. Only thing of note here is the fact that a healthy amount of time was dedicated into making the app responsive to different screens for a better user experience. All the styles for the different pages/components are located in the [styles directory](src\styles).
+Not much to cover here. The styling consists of plain CSS with some variables for the colors used to have some sort of consistency. Only thing of note here is the fact that a healthy amount of time was dedicated into making the app responsive to different screens for a better user experience. All the styles for the different pages/components are located in the [styles directory](./src/styles/).
 
 #### Testing:
 
-Since the app is small in size and the logic behind it is not as complex, a decision was made to only cover some e2e scenarios. The framework used for this is a cool and pretty recent tool that the author studied awhile back, **_Cypress_**. There are a few tests that are pretty self-explanatory. In general, they cover the default state of the app, the results shown when applying filters and if the content from the home page matches the one displayed on the details page for different players. You can check them out [here.](cypress\e2e\tests.js)
+Since the app is small in size and the logic behind it is not as complex, a decision was made to only cover some e2e scenarios. The framework used for this is a cool and pretty recent tool that the author studied awhile back, **_Cypress_**. There are a few tests that are pretty self-explanatory. In general, they cover the default state of the app, the results shown when applying filters and if the content from the home page matches the one displayed on the details page for different players. You can check them out [here.](./cypress/e2e/tests.js)
 
 ---
 
