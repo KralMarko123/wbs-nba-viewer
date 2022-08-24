@@ -6,15 +6,15 @@ import Details from "./pages/Details";
 import NotFound from "./pages/NotFound";
 
 const App = () => {
-  return (
-    <Router>
-      <Routes>
-        <Route path={ROUTE_PATHS.home} element={<Home />} />
-        <Route path={ROUTE_PATHS.details} element={<Details />} />
-        <Route path={ROUTE_PATHS.notFound} element={<NotFound />} />
-      </Routes>
-    </Router>
-  );
+	return (
+		<Router>
+			<Routes>
+				<Route path={ROUTE_PATHS.home} element={<Home />} />
+				<Route path={ROUTE_PATHS.details} element={<Details />} />
+				<Route path={ROUTE_PATHS.notFound} element={<NotFound />} />
+			</Routes>
+		</Router>
+	);
 };
 
 export default App;

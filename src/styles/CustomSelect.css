@@ -1,115 +1,115 @@
 .custom-select {
-  position: relative;
-  min-height: 80px;
-  min-width: 100px;
+	position: relative;
+	min-height: 80px;
+	min-width: 100px;
 
-  display: flex;
-  justify-content: space-evenly;
-  align-items: center;
+	display: flex;
+	justify-content: space-evenly;
+	align-items: center;
 
-  background-color: transparent;
-  border: solid 3px var(--dark-accent);
-  border-radius: 10px;
+	background-color: transparent;
+	border: solid 3px var(--dark-accent);
+	border-radius: 10px;
 }
 
 .custom-select.active {
-  border-color: var(--light-main);
+	border-color: var(--light-main);
 }
 
 .custom-select:hover {
-  cursor: pointer;
+	cursor: pointer;
 }
 
 .selected-option {
-  color: var(--light-main);
-  font-size: 1.5rem;
+	color: var(--light-main);
+	font-size: 1.5rem;
 }
 
 .select-arrow {
-  fill: var(--light-main);
-  font-size: 1.5rem;
+	fill: var(--light-main);
+	font-size: 1.5rem;
 }
 
 .options {
-  width: 100%;
-  position: absolute;
-  top: 110%;
+	width: 100%;
+	position: absolute;
+	top: 110%;
 
-  border: solid 3px var(--dark-main);
-  border-radius: 10px;
+	border: solid 3px var(--dark-main);
+	border-radius: 10px;
 
-  display: none;
+	display: none;
 
-  z-index: 10;
-  overflow: hidden;
+	z-index: 10;
+	overflow: hidden;
 }
 
 .options.shown {
-  display: block;
+	display: block;
 }
 
 .options.hidden {
-  display: none;
+	display: none;
 }
 
 .option {
-  padding: 0.5em;
-  background-color: var(--light-main);
+	padding: 0.5em;
+	background-color: var(--light-main);
 
-  color: var(--dark-main);
-  font-size: 1.25rem;
+	color: var(--dark-main);
+	font-size: 1.25rem;
 
-  overflow: hidden;
+	overflow: hidden;
 }
 
 .option:hover {
-  cursor: pointer;
+	cursor: pointer;
 
-  background-color: var(--dark-main);
-  color: var(--light-main);
+	background-color: var(--dark-main);
+	color: var(--light-main);
 }
 
 @media (min-width: 768px) and (max-width: 1439px) {
-  .custom-select {
-    min-height: 60px;
-    min-width: 120px;
-    padding: 0.5em 1em;
-  }
+	.custom-select {
+		min-height: 60px;
+		min-width: 120px;
+		padding: 0.5em 1em;
+	}
 
-  .selected-option,
-  .select-arrow {
-    font-size: 1.25rem;
-  }
+	.selected-option,
+	.select-arrow {
+		font-size: 1.25rem;
+	}
 
-  .options {
-    min-width: 120px;
-  }
+	.options {
+		min-width: 120px;
+	}
 
-  .option {
-    padding: 0.75em;
-    font-size: 1.15rem;
-  }
+	.option {
+		padding: 0.75em;
+		font-size: 1.15rem;
+	}
 }
 
 @media (max-width: 767px) {
-  .custom-select {
-    width: 30%;
-    min-width: unset;
-    min-height: 60px;
-    padding: 0.15em 0.35em;
-  }
+	.custom-select {
+		width: 30%;
+		min-width: unset;
+		min-height: 60px;
+		padding: 0.15em 0.35em;
+	}
 
-  .selected-option,
-  .select-arrow {
-    font-size: 1rem;
-  }
+	.selected-option,
+	.select-arrow {
+		font-size: 1rem;
+	}
 
-  .options {
-    width: 100%;
-  }
+	.options {
+		width: 100%;
+	}
 
-  .option {
-    padding: 0.75em;
-    font-size: 0.85rem;
-  }
+	.option {
+		padding: 0.75em;
+		font-size: 0.85rem;
+	}
 }
