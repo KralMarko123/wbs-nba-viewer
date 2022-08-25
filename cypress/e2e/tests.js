@@ -2,12 +2,12 @@
 
 describe("e2e test suite", () => {
 	beforeEach(() => {
-		cy.visit(Cypress.env("dev-url"));
+		cy.visit(Cypress.env("baseURL"));
 	});
 
-	it("Goes to a non-existent route and checks if the NotFound page is rendered", () => {
-		cy.visit(`${Cypress.env("dev-url")}testnotfound`);
-		cy.checkNotFound();
+	afterEach(() => {
+		cy.get("#name").clear();
+		cy.selectResultsCount(20);
 	});
 
 	it("Opens up the Home page and checks the default state of the page", () => {
@@ -45,7 +45,7 @@ describe("e2e test suite", () => {
 	});
 
 	it("Enters the details page for each player card and asserts the content within", () => {
-		const numberOfResults = 20;
+		const numberOfResults = 10;
 		cy.selectResultsCount(numberOfResults);
 		let playerName;
 		let dob;
@@ -69,5 +69,12 @@ describe("e2e test suite", () => {
 			cy.get(".back-button").click();
 			cy.get(".home").should("be.visible");
 		}
+	});
+});
+
+describe("dev test suite", () => {
+	it("Goes to a non-existent route and checks if the NotFound page is rendered", () => {
+		cy.visit(`${Cypress.env("devURL")}/testnotfound`);
+		cy.checkNotFound();
 	});
 });

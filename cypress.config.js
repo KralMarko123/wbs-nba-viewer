@@ -1,15 +1,15 @@
 const { defineConfig } = require("cypress");
 
 module.exports = defineConfig({
-	defaultCommandTimeout: 20000,
-	pageLoadTimeout: 15000,
+	defaultCommandTimeout: 25000,
+	pageLoadTimeout: 25000,
 	env: {
-		url: "https://kralmarko123.github.io/wbs-nba-viewer/",
-		"dev-url": "localhost:3000/wbs-nba-viewer",
+		baseURL: "https://kralmarko123.github.io/wbs-nba-viewer/",
+		devURL: "http://localhost:3000/wbs-nba-viewer",
 	},
 	retries: {
 		runMode: 1,
-		openMode: 0,
+		openMode: 1,
 	},
 	e2e: {
 		// We've imported your old cypress plugins here.
